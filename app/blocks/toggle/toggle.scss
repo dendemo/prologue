@@ -1,0 +1,22 @@
+.toggle {
+  border: none;
+  width: $pad_changer;
+  height: 42px;
+  background: rgba($oslo-gray, .5);
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  @include render(desktop) {
+    display: none;
+  }
+
+  &__icon {
+    font-size: 18px;
+    color: $white;
+  }
+}

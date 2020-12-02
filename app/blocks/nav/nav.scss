@@ -1,0 +1,94 @@
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 $pad_pit 0;
+  box-shadow: inset 0 -1px 0 0 rgba($black, .15);
+  border-bottom: 1px solid rgba($white, .05);
+
+  @include render(tablet) {
+    padding: 0 0 $pad_pit_tablet 0;
+  }
+
+  @include render(desktop) {
+    box-shadow: none;
+    border-bottom: none;
+  }
+
+  &__item {
+    @include render(desktop) {
+      line-height: 37px;
+    }
+
+    @include render(desktop_hd) {
+      line-height: 40px;
+    }
+
+  }
+
+  &__link {
+    display: flex;
+    padding: 10px $pad_doe;
+    text-decoration: none;
+    outline: none;
+
+    @include render(tablet) {
+      padding: 10px $pad_doe_tablet;
+    }
+
+    @include render(desktop) {
+      padding: 10px $pad_doe_desktop;
+    }
+
+    @include render(desktop_hd) {
+      padding: 10px $pad_doe_desktop_hd;
+    }
+
+    &_active {
+      background-color: rgba($black, .15);
+
+      .nav__text {
+        color: $white;
+      }
+
+      .nav__icon {
+        color: $deep_blush;
+      }
+    }
+  }
+
+  &__text {
+    margin-left: auto;
+    font-size: 17px;
+    color: rgba($white, .5);
+
+    @include render(tablet) {
+      font-size: 20px;
+    }
+
+    @include render(desktop) {
+      font-size: 17px;
+      order: 1;
+    }
+
+    @include render(desktop_hd) {
+      font-size: 23px;
+    }
+  }
+
+  &__icon {
+    color: $mako;
+    padding-left: 20px;
+
+    @include render(tablet) {
+      font-size: 20px;
+    }
+
+    @include render(desktop) {
+      padding-left: 0;
+    }
+
+    @include render(desktop_hd) {
+      font-size: 24px;
+    }
+  }
+}

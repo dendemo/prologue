@@ -1,0 +1,67 @@
+.author {
+  @include clearfix();
+  padding: 28px $pad_doe;
+  line-height: 1;
+
+  @include render(tablet) {
+    padding: 32px $pad_doe_tablet $pad_doe_tablet;
+  }
+
+  @include render('desktop') {
+    padding: 37px $pad_doe_desktop $pad_doe_desktop;
+  }
+
+  @include render('desktop_hd') {
+    padding: 44px $pad_doe_desktop_hd $pad_doe_desktop_hd;
+  }
+
+  &__avatar-box {
+    width: 48px;
+    height: 48px;
+    float: right;
+    margin-bottom: 20px;
+
+    @include render('desktop') {
+      float: left;
+    }
+
+    @include render('desktop_hd') {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__avatar {
+    width: 100%;
+    display: block;
+  }
+
+  &__id {
+    font-size: 25px;
+    font-weight: 600;
+    color: $white;
+    margin: 0;
+    float: right;
+    clear: right;
+
+    @include render('desktop_hd') {
+      font-size: 30px;
+    }
+  }
+
+  &__descriptor {
+    float: right;
+    clear: right;
+    font-size: 13px;
+    color: rgba($white, .5);
+    margin: 6px 0 0;
+
+    @include render(tablet) {
+      line-height: 16px;
+    }
+
+    @include render(desktop_hd) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.form {
+	padding-top: 2*$pad_cup;
+	display: flex;
+	flex-flow: wrap;
+	
+  &__control {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba($black, .15);
+    border-radius: 6px;
+    outline: none;
+    background: rgba($white, .95);
+    box-shadow: inset 2px 2px 0 0 rgba($black, .025);
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 14px $pad_cup;
+    margin-bottom: 20px;
+    color: gray;
+    -webkit-appeareance: none;
+
+    &:focus {
+      box-shadow: 0 0 2px 1px $shadow-green;
+      background: $white;
+    }
+
+    &::placeholder {
+    	color: $emperor;
+    }
+
+    @include render(tablet) {
+    	font-size: 21px;
+    }
+
+    @include render(desktop) {
+		margin-bottom: 40px;
+    }
+
+    &_input {
+      height: 53px;
+
+      @include render(tablet) {
+      	flex: 1 1 0;
+
+      	&:nth-child(odd) {
+      		margin-right: 20px;
+
+      		@include render(desktop) {
+      			margin-right: 40px;
+      		}
+      	}
+      }
+
+      @include render(desktop) {
+      	height: 60px;
+      }
+
+      @include render(desktop_hd) {
+      	height: 70px;
+      }
+    }
+
+    &_area {
+    	height: 260px;
+      resize: vertical;
+
+    	@include render(desktop) {
+    		height: 300px;
+    	}
+
+    	@include render(desktop_hd) {
+    		height: 350px;
+    	}
+    }
+  }
+
+    &__button {
+    	margin: auto;
+    }
+}

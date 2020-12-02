@@ -1,0 +1,112 @@
+.section {
+  &__button {
+    .button {
+      margin-top: 2*$pad_cup;
+
+      @include render(tablet) {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  &__gallery {
+    .gallery {
+      margin-top: 2*$pad_cup;
+
+      @include render(tablet) {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  &__img-box {
+    .img-box {
+      margin: $pad_cup 0;
+
+      @include render(tablet) {
+        margin: 21px 0;
+      }
+    }
+  }
+
+  &_general {
+    text-align: center;
+    box-shadow: inset 0 1px 0 0 rgba($black, .05), inset 2px 2px 0 0 rgba($black, .025);
+  }
+
+  &_pad {
+
+    &_m {
+      padding: 2*$pad_cup $pad_lol;
+
+      @include render(tablet) {
+        padding: 64px 42px;
+      }
+
+      @include render(desktop_hd) {
+        padding: 100px 88px;
+      }
+    }
+
+    &_l {
+      padding: 4*$pad_cup $pad_lol;
+
+      @include render(tablet) {
+        padding: 85px 42px;
+      }
+
+      @include render(desktop) {
+        padding: 106px 42px;
+      }
+
+      @include render(desktop_hd) {
+        padding: 253px 58px;
+      }
+    }
+
+    &_xl {
+      padding: 44px 42px 60px;
+
+      @include render(tablet) {
+        padding: 51px 42px 68px;
+      }
+    }
+  }
+
+  &_theme {
+
+    &_main {
+      background: url(imgs/fullwidth/soccer-s.jpg) center center/cover;
+
+      @include render(tablet) {
+        background: url(imgs/fullwidth/soccer-m.jpg) center center/cover;
+      }
+
+      @include render(desktop) {
+        background: url(imgs/fullwidth/soccer-l.jpg) center center/cover;
+      }
+
+      @include render(desktop_hd) {
+        background: url(imgs/fullwidth/soccer-xl.jpg) center center/cover;
+      }
+    }
+
+    &_joy {
+      background-color: $catskill;
+    }
+
+    &_spring {
+      background-color: $porcelain;
+    }
+
+    &_ever {
+      background-color: $porcelain_dark;
+      margin-bottom: 1px;
+    }
+
+    &_geyser {
+      background-color: $geyser;
+    }
+
+  }
+}

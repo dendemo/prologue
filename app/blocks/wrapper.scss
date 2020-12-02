@@ -1,0 +1,9 @@
+.wrapper {
+	@include render('desktop') {
+		margin-left: $width_menu_desktop;
+	}
+
+	@include render('desktop_hd') {
+		margin-left: $width_menu_desktop_hd;
+	}
+}

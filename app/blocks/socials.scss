@@ -1,0 +1,56 @@
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: $pad_pit $pad_doe 0;
+  display: flex;
+  justify-content: center;
+
+  @include render(tablet) {
+    padding: $pad_pit_tablet $pad_doe_tablet;
+  }
+
+  @include render(desktop) {
+    padding: $pad_doe_desktop;
+  }
+
+  @include render(desktop_hd) {
+    padding: $pad_doe_desktop_hd;
+  }
+
+  &__item {}
+
+  &__link {
+    width: $pad_pit;
+    height: $pad_pit;
+    line-height: $pad_pit;
+    display: block;
+    text-align: center;
+    color: $mako;
+    outline: none;
+    
+    @include transition(color);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__icon {
+    font-size: 19px;
+
+    @include render(tablet) {
+      font-size: 21px;
+    }
+
+    @include render(desktop_hd) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+
+    &_hidden {
+      @include hidden();
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.menu {
+  box-sizing: border-box;
+  width: $width_menu_phone;
+  position: fixed;
+  top: 0;
+  //To prevent an ugly blinc when scrolling on ios 
+  bottom: -70px;
+  background-color: $shark;
+  transform: translateX(-$width_menu_phone);
+  z-index: 1000;
+
+  @include render(tablet) {
+    transform: translateX(-$width_menu_tablet);
+    width: $width_menu_tablet;
+  }
+
+
+  @include render(desktop) {
+    transform: translateX(0);
+    width: $width_menu_desktop;
+  }
+
+  @include render('desktop_hd') {
+    width: $width_menu_desktop_hd;
+  }
+
+  &__toggle {
+    .toggle {
+      position: absolute;
+      top: 10px;
+      right: -($pad_changer + 10px);
+    }
+  }
+
+  &__socials {
+    .socials {
+      @include render(desktop) {
+        bottom: 70px;
+        box-sizing: border-box;
+        position: absolute; 
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+//======================COLORS=======================//
+$black: rgb(0, 0, 0);
+$catskill: rgb(245, 250, 250);
+$deep-blush: rgb(226, 118, 137);
+$dove-gray: rgb(102, 102, 102);
+$emperor: rgb(85, 85, 85);
+$geyser: rgb(220, 227, 226);
+$gray: rgb(136, 136, 136);
+$mako: rgb(65, 72, 76);
+$oslo-gray: rgb(128, 136, 144);
+$porcelain: rgb(236, 241, 241);
+$porcelain_dark: rgb(232, 237, 236);
+$shadow-green: rgb(142, 190, 188);
+$shark: rgb(34, 39, 41);
+$sinbad: rgb(158, 206, 204);
+$white: rgb(255, 255, 255);
+
+//====================SPACES=======================//
+
+$pad_doe: 24px;
+$pad_doe_tablet: 26px;
+$pad_doe_desktop: 32px;
+$pad_doe_desktop_hd: 38px;
+$pad_pit: 37px;
+$pad_pit_tablet: 42px;
+$pad_changer: 60px;
+$pad_cup: 18px;
+$pad_lol: 15px;
+$width_menu_phone: 200px;
+$width_menu_tablet: 300px;
+$width_menu_desktop: 23%;
+$width_menu_desktop_hd: 18%;
+
+//==================FONT SIZES===================//
+$f-s_s: 18px;
+$f-s_m: 21px;
+$f-s_l: 25px;
+
+//====================BREAKPOINTS====================//
+$breakpoints:('tablet': 650px,
+'desktop': 1000px,
+'desktop_hd': 1900px);
+
+//=====================MIXINS======================//
+@mixin render($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin hidden() {
+  position: absolute;
+  left: -99999px;
+}
+
+@mixin transition($property: all, $duration: .2s, $delay: .1s, $function: ease-out) {
+  transition: $property $duration $function $delay;
+}

@@ -1,0 +1,28 @@
+.title {
+	margin: 0;
+	font-size: 28px;
+	line-height: 42px;
+	font-weight: 300;
+
+	@include render(tablet) {
+		font-size: 42px;
+		line-height: 64px;
+	}
+
+	@include render(desktop_hd) {
+		font-size: 50px;
+		line-height: 76px;
+	}
+
+	&_outstand {
+		color: rgba($white, .75);
+	}
+
+	&_pad_s {
+		padding-bottom: $pad_cup;
+
+		@include render(tablet) {
+			padding-bottom: 21px;
+		}
+	}
+}

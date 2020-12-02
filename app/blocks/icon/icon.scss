@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.woff2') format('woff2'),
+    url('./font/fontello.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  &:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &_type {
+    &_home:before {
+      content: '\e800';
+    }
+
+    &_th:before {
+      content: '\e801';
+    }
+
+    &_user:before {
+      content: '\e802';
+    }
+
+    &_twitter:before {
+      content: '\f099';
+    }
+
+    &_facebook:before {
+      content: '\f09a';
+    }
+
+
+    &_github:before {
+      content: '\f09b';
+    }
+
+    &_menu:before {
+      content: '\f0c9';
+    }
+
+    &_mail:before {
+      content: '\f0e0';
+    }
+
+    &_dribble:before {
+      content: '\f17d';
+    }
+  }
+}

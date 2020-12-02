@@ -1,0 +1,23 @@
+.parent {
+  overflow-x: hidden;
+
+  &__menu_visible {
+
+    .wrapper {
+      transform: translateX($width_menu_phone);
+
+      @include render(tablet) {
+        transform: translateX($width_menu_tablet);
+      }
+
+      @include render(desktop) {
+        transform: translateX(0);
+      }
+    }
+
+    .menu {
+      transform: translateX(0);
+      z-index: 1;
+    }
+  }
+}
